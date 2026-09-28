@@ -1,16 +1,32 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#032f43">
 <title>محطة مشروعي | وطن رقمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="bg"></div>
 <main class="app">
-  <header><div class="tag">🇸🇦 مبادرة وطن رقمي</div><button id="homeBtn" class="ghost">⌂ البداية</button></header>
-  <section id="screen" class="card"></section>
-  <footer>محطة مشروعي | إعداد وتقديم: منال بنت مهجع العنزي</footer>
+<header class="brand-header">
+  <div class="brand-logos" aria-label="شعارات المبادرة">
+    <div class="logo-box tvtc-logo"><img src="assets/tvtc.jpeg" alt="شعار المؤسسة العامة للتدريب التقني والمهني"></div>
+    <div class="national-group">
+      <div class="logo-box national-logo"><img src="assets/national-day.jpeg" alt="شعار اليوم الوطني السعودي"></div>
+      <button id="homeButton" class="home-link" type="button" onclick="requestHome()" hidden>⌂ الرئيسية</button>
+    </div>
+  </div>
+  <div class="brand-text"><div class="tag">مبادرة وطن رقمي <span>|</span> محطة مشروعي</div><div class="college-name">الكلية التقنية الرقمية للبنات بتبوك</div></div>
+</header>
+<div id="progressWrap" class="progress-wrap" hidden><div id="progressBar" class="progress-bar"></div></div>
+<section id="screen" class="card" aria-live="polite"></section>
+<footer>محطة مشروعي | إعداد وتقديم: منال بنت مهجع العنزي</footer>
 </main>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
