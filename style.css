@@ -30,3 +30,57 @@
   .aspect-number{background:#e3f5f3!important;color:#075e63!important}
   .project-card *{text-shadow:none!important}
 }
+
+/* v10.1 — iPad / Safari header fix */
+.brand-header{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+}
+.brand-logos{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  min-width:0;
+}
+.logo-box{
+  flex:0 0 auto;
+  height:58px;
+  width:auto;
+  max-width:none;
+  overflow:hidden;
+}
+.logo-box img{
+  display:block;
+  width:auto !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain;
+}
+.tvtc-logo{width:190px;padding:5px 8px}
+.national-logo{width:112px;padding:0}
+.tvtc-logo img,.national-logo img{width:100% !important;height:100% !important;object-fit:contain}
+.national-group{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+.brand-text{min-width:250px;max-width:390px;text-align:right;line-height:1.55}
+
+@media (max-width:1100px){
+  .app{width:100%;padding-left:20px;padding-right:20px}
+  .brand-header{grid-template-columns:1fr;gap:10px}
+  .brand-logos{width:100%;justify-content:space-between}
+  .brand-text{width:100%;max-width:none;min-width:0;text-align:center}
+  .tvtc-logo{width:180px;height:56px}
+  .national-logo{width:108px;height:56px}
+}
+
+@media (max-width:650px){
+  .app{padding-left:13px;padding-right:13px}
+  .brand-logos{gap:8px}
+  .tvtc-logo{width:150px;height:48px}
+  .national-logo{width:92px;height:48px}
+  .national-group{gap:6px}
+  .home-link{font-size:12px;padding:7px 9px}
+}
